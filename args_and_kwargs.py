@@ -13,8 +13,15 @@ def concatenate(**words):
     return result_string
 
 
+def printing(a, b, c, d):
+    print(a, b, c, d)
+
+
 result = sum((1, 2, 3))
 result_string = concatenate(a="This", b="is", c="Amazing")
 
 print(result)
 print(result_string)
+
+temp = [1, 2, 3, 4]
+printing(*temp)
