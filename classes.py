@@ -18,6 +18,11 @@ class Employee:
     def set_raise_amount(cls, amount):
         cls.raise_amount = amount
 
+    @classmethod
+    def from_hyphen(cls,emp_details):
+        first, last, salary = emp_details.split('-')
+        return cls(first,last,salary)
+
     @staticmethod
     def isMonday(day):
         if day == 'Monday':
@@ -28,12 +33,19 @@ class Employee:
 emp1 = Employee('Rishi', 'Shukla', 2000)
 emp2 = Employee('Praveen', 'Parmar', 3000)
 
+emp_details_1 = "Rahul-Jha-4000"
+
+
+emp3 = Employee.from_hyphen(emp_details_1)
+
 print('No.of employees: {0}'.format(str(Employee.num_of_employees)))
 
 print('\n')
 emp1.printing()
 print('\n')
 emp2.printing()
+print('\n')
+emp3.printing()
 
 print('\n')
 print("Initial Raise Amount: {0}".format(str(Employee.raise_amount)))
