@@ -2,10 +2,10 @@ import time
 
 
 def outer_function(original_function):
-    def inner_function(x):
+    def inner_function(*argument1, **argument2):
         start = time.time()
         print("Start Time: " + str(start))
-        original_function(x)
+        original_function(*argument1, **argument2)
         end = time.time()
         print("End Time: " + str(end))
         print("Time Taken: " + str(end - start))
@@ -18,4 +18,4 @@ def original_function(x):
     print("Printing value: " + str(x))
 
 
-original_function(1)
+original_function("Hi")
