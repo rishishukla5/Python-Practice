@@ -15,7 +15,7 @@ def outer_function(original_function):
 
 @outer_function
 def original_function(x):
-    print("Printing value: " + str(x))
+    print("Printing value: "+ str(x))
 
 
 original_function("Hi")
