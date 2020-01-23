@@ -8,7 +8,7 @@ def alphnumeric_random_value(n):
     for x in range(n):
         value = ""
         while True:
-            for i in range(1):
+            for i in range(16):
                 value += random.choice(string.ascii_letters + string.digits)
             if value not in store:
                 yield value
